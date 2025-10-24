@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build the application') {
             steps {
-                 'sh dotnet build -no-restore'
+                 sh 'dotnet build --no-restore'
             }
         }
         stage('Run the tests') {
