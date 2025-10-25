@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build the application') {
             steps {
-                sh 'dotnet build --no-restore'
+                sh 'dotnet build --no-restore /maxcpucount:2 --verbosity detailed'
             }
         }
         stage('Run the tests') {
